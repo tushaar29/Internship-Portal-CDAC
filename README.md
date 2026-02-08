@@ -1,6 +1,31 @@
 # Online Internship Portal
 
+<div align="center">
+  
+  <img src="intersify-frontend/public/Gemini_Generated_Image_1vjv9m1vjv9m1vjv.png" alt="Project Banner" width="820">
+  
+  <br/><br/>
+  
+  <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white" alt="React Badge"></a>
+  <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white" alt="Vite Badge"></a>
+  <a href="https://spring.io/projects/spring-boot"><img src="https://img.shields.io/badge/Spring%20Boot-4.0.2-6DB33F?logo=springboot&logoColor=white" alt="Spring Boot Badge"></a>
+  <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/MySQL-8-4479A1?logo=mysql&logoColor=white" alt="MySQL Badge"></a>
+  <a href="#"><img src="https://img.shields.io/badge/License-Proprietary-orange" alt="License Badge"></a>
+  
+</div>
+
 A platform that connects students with companies for internship opportunities. It enables rich student profiles, employer dashboards, internship listings, application tracking, resume uploads, and status updates.
+
+## Table of Contents
+- Features
+- Tech Stack
+- Screenshots
+- Getting Started
+- Folder Structure
+- Development Notes
+- Scripts Reference
+- Contributing
+- License
 
 ## Features
 
@@ -17,6 +42,31 @@ A platform that connects students with companies for internship opportunities. I
 - Backend: Java Spring Boot (Maven)
 - Database: MySQL
 - Storage/Media: Cloudinary and Firebase Storage
+
+## Screenshots
+
+> Note: UI may evolve; screenshots illustrate key flows.
+
+### Public Home
+<img src="intersify-frontend/public/Screenshot 2026-02-03 181056.png" alt="Home Page" width="820">
+
+### Internship Detail
+<img src="intersify-frontend/public/Screenshot 2026-02-03 181223.png" alt="Internship Detail" width="820">
+
+### Student Dashboard
+<img src="intersify-frontend/public/Screenshot 2026-02-03 181345.png" alt="Student Dashboard" width="820">
+
+### Company Dashboard
+<img src="intersify-frontend/public/Screenshot 2026-02-03 181511.png" alt="Company Dashboard" width="820">
+
+### Applications & Status
+<img src="intersify-frontend/public/Screenshot 2026-02-03 181641.png" alt="Application Tracking" width="820">
+
+### Admin Overview
+<img src="intersify-frontend/public/Screenshot 2026-02-03 181904.png" alt="Admin Dashboard" width="820">
+
+### Authentication
+<img src="intersify-frontend/public/Screenshot 2026-02-03 181116.png" alt="Login" width="410"> <img src="intersify-frontend/public/Screenshot 2026-02-03 181252.png" alt="Register" width="410">
 
 ## Getting Started
 
