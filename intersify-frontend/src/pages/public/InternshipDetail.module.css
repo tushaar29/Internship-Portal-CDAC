@@ -1,0 +1,937 @@
+/* ============================================================================
+   INTERNSHIP DETAIL PAGE - PREMIUM 70/30 SPLIT LAYOUT
+   ============================================================================
+   Professional design with minimalist palette, soft shadows, and rounded corners
+   ============================================================================ */
+
+.page {
+  background: #F9FAFB;
+  min-height: 100vh;
+}
+
+/* ============================================================================
+   HEADER SECTION
+   ============================================================================ */
+
+.headerSection {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 16px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.sectionContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.backBtn {
+  background: none;
+  color: #0A65CC;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: all 250ms ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.backBtn:hover {
+  color: #003D7A;
+  transform: translateX(-2px);
+}
+
+/* ============================================================================
+   DETAILS SECTION
+   ============================================================================ */
+
+.detailsSection {
+  padding: 48px 32px;
+  background: #F9FAFB;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ============================================================================
+   LEFT COLUMN - MAIN CONTENT (70%)
+   ============================================================================ */
+
+.mainContent {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 48px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Job Header */
+.jobHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.headerLeft {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.companyLogo {
+  width: 96px;
+  height: 96px;
+  border-radius: 14px;
+  object-fit: cover;
+  background: linear-gradient(135deg, #E7F0FA 0%, #F3F4F6 100%);
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(10, 101, 204, 0.12);
+}
+
+.headerInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.jobTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.companyName {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #6B7280;
+  margin: 0;
+}
+
+.metaBadges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+.badgePrimary {
+  background: linear-gradient(135deg, #0A65CC 0%, #003D7A 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(10, 101, 204, 0.2);
+}
+
+.badgeSecondary {
+  background: #F3F4F6;
+  color: #6B7280;
+  border: 1px solid #E5E7EB;
+}
+
+/* Content Sections */
+.contentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.sectionContent {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #5E6670;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* ============================================================================
+   RIGHT COLUMN - ACTION SIDEBAR (30%) - STICKY
+   ============================================================================ */
+
+.actionSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: sticky;
+  top: 100px;
+}
+
+.sidebarCard {
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid #E5E7EB;
+}
+
+/* Apply Button */
+.applyBtn {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.applyBtnPrimary {
+  background: linear-gradient(135deg, #0A65CC 0%, #003D7A 100%);
+  color: #FFFFFF;
+  box-shadow: 0 6px 16px rgba(10, 101, 204, 0.25);
+}
+
+.applyBtnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(10, 101, 204, 0.35);
+}
+
+.applyBtnApplied {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  color: #FFFFFF;
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.25);
+  cursor: default;
+}
+
+.applyBtnDisabled {
+  background: #E5E7EB;
+  color: #9CA3AF;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Sidebar Title */
+.sidebarTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Details List */
+.detailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.detailItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.detailItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.detailLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.detailValue {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0A65CC;
+  text-align: right;
+}
+
+/* Share Buttons */
+.shareButtons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.shareBtn {
+  padding: 12px 8px;
+  background: #F9FAFB;
+  color: #0A65CC;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 250ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+.shareBtn:hover {
+  background: #E7F0FA;
+  border-color: #0A65CC;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 101, 204, 0.15);
+}
+
+/* ============================================================================
+   LOADING & ERROR STATES
+   ============================================================================ */
+
+.loadingContainer,
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 32px;
+  text-align: center;
+  background: #F9FAFB;
+}
+
+.loadingContainer p,
+.errorContainer p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.errorContainer button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #0A65CC;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.errorContainer button:hover {
+  background: #003D7A;
+  transform: translateY(-2px);
+}
+
+/* ============================================================================
+   RESPONSIVE DESIGN
+   ============================================================================ */
+
+@media (max-width: 1200px) {
+  .detailsSection {
+    padding: 40px 24px;
+  }
+
+  .contentWrapper {
+    gap: 32px;
+    grid-template-columns: 1fr 320px;
+  }
+
+  .mainContent {
+    padding: 40px;
+    gap: 32px;
+  }
+
+  .jobTitle {
+    font-size: 32px;
+  }
+
+  .companyLogo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contentWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .actionSidebar {
+    position: static;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: grid;
+    gap: 24px;
+  }
+
+  .mainContent {
+    grid-column: 1 / -1;
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerSection {
+    padding: 12px 16px;
+  }
+
+  .detailsSection {
+    padding: 32px 16px;
+  }
+
+  .mainContent {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .jobHeader {
+    gap: 20px;
+    padding-bottom: 24px;
+  }
+
+  .headerLeft {
+    gap: 16px;
+  }
+
+  .companyLogo {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+  }
+
+  .jobTitle {
+    font-size: 26px;
+  }
+
+  .companyName {
+    font-size: 16px;
+  }
+
+  .sectionTitle {
+    font-size: 18px;
+  }
+
+  .sectionContent {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .contentSection {
+    gap: 12px;
+  }
+
+  .actionSidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .sidebarCard {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .applyBtn {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  .detailsList {
+    gap: 14px;
+  }
+
+  .detailItem {
+    gap: 12px;
+    padding-bottom: 14px;
+  }
+
+  .detailLabel {
+    font-size: 12px;
+  }
+
+  .detailValue {
+    font-size: 15px;
+  }
+
+  .shareButtons {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .shareBtn {
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerSection {
+    padding: 12px;
+  }
+
+  .backBtn {
+    font-size: 13px;
+  }
+
+  .detailsSection {
+    padding: 20px 12px;
+  }
+
+  .sectionContainer {
+    max-width: 100%;
+  }
+
+  .contentWrapper {
+    gap: 16px;
+  }
+
+  .mainContent {
+    padding: 16px;
+    gap: 20px;
+    border-radius: 12px;
+  }
+
+  .jobHeader {
+    gap: 16px;
+    padding-bottom: 16px;
+  }
+
+  .headerLeft {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .companyLogo {
+    width: 64px;
+    height: 64px;
+  }
+
+  .jobTitle {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .companyName {
+    font-size: 14px;
+  }
+
+  .metaBadges {
+    justify-content: center;
+  }
+
+  .badge {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .sectionTitle {
+    font-size: 16px;
+  }
+
+  .sectionContent {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .contentSection {
+    gap: 10px;
+  }
+
+  .actionSidebar {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .sidebarCard {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .sidebarTitle {
+    font-size: 13px;
+  }
+
+  .applyBtn {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  .detailsList {
+    gap: 12px;
+  }
+
+  .detailItem {
+    padding-bottom: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .detailLabel {
+    font-size: 11px;
+  }
+
+  .detailValue {
+    font-size: 14px;
+  }
+
+  .shareButtons {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .shareBtn {
+    padding: 8px 4px;
+    font-size: 10px;
+    border-radius: 8px;
+  }
+
+  .loadingContainer,
+  .errorContainer {
+    padding: 16px;
+    min-height: 80vh;
+  }
+
+  .errorContainer button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* ============================================================================
+   ENHANCED HEADER STYLES
+   ============================================================================ */
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.featuredBadge {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.applicantsInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px 16px;
+  background: #F9FAFB;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+}
+
+.applicantsCount {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0A65CC;
+  line-height: 1;
+}
+
+.applicantsLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* ============================================================================
+   SKILLS GRID
+   ============================================================================ */
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.skillTag {
+  background: #E7F0FA;
+  color: #0A65CC;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #BAE6FD;
+  transition: all 200ms ease;
+}
+
+.skillTag:hover {
+  background: #0A65CC;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* ============================================================================
+   RESPONSIBILITIES LIST
+   ============================================================================ */
+
+.responsibilitiesList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.responsibilityItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.responsibilityItem:last-child {
+  border-bottom: none;
+}
+
+.responsibilityBullet {
+  color: #0A65CC;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.4;
+  flex-shrink: 0;
+  width: 16px;
+  text-align: center;
+}
+
+.responsibilityText {
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.loadingShimmer {
+  background: linear-gradient(90deg, #F3F4F6 25%, #E5E7EB 50%, #F3F4F6 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+/* ============================================================================
+   RESPONSIVE FOR NEW ELEMENTS
+   ============================================================================ */
+
+@media (max-width: 768px) {
+  .deadlineBanner {
+    padding: 8px 0;
+  }
+  
+  .bannerContent {
+    font-size: 12px;
+    gap: 8px;
+  }
+  
+  .bannerIcon {
+    font-size: 14px;
+  }
+  
+  .bannerCta {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+  
+  .titleWrapper {
+    gap: 8px;
+  }
+  
+  .featuredBadge {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  
+  .headerRight {
+    gap: 12px;
+  }
+  
+  .applicantsInfo {
+    padding: 8px 12px;
+  }
+  
+  .applicantsCount {
+    font-size: 18px;
+  }
+  
+  .applicantsLabel {
+    font-size: 10px;
+  }
+  
+  .skillsGrid {
+    gap: 6px;
+  }
+  
+  .skillTag {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+  
+  .responsibilityItem {
+    gap: 8px;
+    padding: 8px 0;
+  }
+  
+  .responsibilityBullet {
+    font-size: 14px;
+    width: 14px;
+  }
+  
+  .responsibilityText {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .deadlineBanner {
+    padding: 6px 0;
+  }
+  
+  .bannerContent {
+    font-size: 11px;
+    gap: 6px;
+    flex-direction: column;
+  }
+  
+  .bannerIcon {
+    font-size: 12px;
+  }
+  
+  .bannerText {
+    text-align: center;
+  }
+  
+  .bannerCta {
+    font-size: 9px;
+    padding: 3px 6px;
+  }
+  
+  .headerSection {
+    top: 60px;
+  }
+  
+  .titleWrapper {
+    gap: 6px;
+  }
+  
+  .featuredBadge {
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+  
+  .headerRight {
+    gap: 8px;
+  }
+  
+  .applicantsInfo {
+    padding: 6px 10px;
+  }
+  
+  .applicantsCount {
+    font-size: 16px;
+  }
+  
+  .applicantsLabel {
+    font-size: 9px;
+  }
+  
+  .skillsGrid {
+    gap: 4px;
+  }
+  
+  .skillTag {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+  
+  .responsibilityItem {
+    gap: 6px;
+    padding: 6px 0;
+  }
+  
+  .responsibilityBullet {
+    font-size: 12px;
+    width: 12px;
+  }
+  
+  .responsibilityText {
+    font-size: 13px;
+  }
+}

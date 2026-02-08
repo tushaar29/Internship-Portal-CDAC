@@ -1,0 +1,224 @@
+/* ============================================================================
+   STUDENT CERTIFICATES - CLEAN & PROFESSIONAL DESIGN
+   ============================================================================ */
+
+.page {
+  background: #F9FAFB;
+  min-height: 100vh;
+  padding: 32px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================================================================
+   HEADER
+   ============================================================================ */
+
+.header {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.headerIcon {
+  color: #0A65CC;
+  margin-right: 16px;
+  width: 32px;
+  height: 32px;
+}
+
+.pageTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+/* ============================================================================
+   CERTIFICATES GRID
+   ============================================================================ */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.cardHeader {
+  background: linear-gradient(135deg, #0A65CC 0%, #003D7A 100%);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardHeaderTitle {
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cardIcon {
+  color: rgba(255, 255, 255, 0.8);
+  width: 20px;
+  height: 20px;
+}
+
+.cardBody {
+  padding: 24px;
+}
+
+.internshipTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  color: #4B5563;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+.infoIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  color: #9CA3AF;
+}
+
+.cardFooter {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #F3F4F6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.certId {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #9CA3AF;
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: #EBF5FF;
+  color: #0A65CC;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.downloadBtn:hover {
+  background: #DBEAFE;
+  color: #004493;
+}
+
+.downloadIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+/* ============================================================================
+   EMPTY STATE & LOADING
+   ============================================================================ */
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #E5E7EB;
+  border-top-color: #0A65CC;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error {
+  background: #FEF2F2;
+  border-left: 4px solid #EF4444;
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 4px;
+}
+
+.errorText {
+  color: #B91C1C;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 64px 24px;
+  background: #FFFFFF;
+  border: 1px dashed #D1D5DB;
+  border-radius: 12px;
+}
+
+.emptyIcon {
+  width: 48px;
+  height: 48px;
+  color: #9CA3AF;
+  margin: 0 auto 16px auto;
+}
+
+.emptyTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.emptyText {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #6B7280;
+}

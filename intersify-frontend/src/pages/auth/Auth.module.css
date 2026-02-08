@@ -1,0 +1,452 @@
+/* ============================================================================
+   AUTHENTICATION PAGES - CLEAN & PROFESSIONAL DESIGN
+   ============================================================================
+   Login & Register pages with simple, eye-catching layout
+   ============================================================================ */
+
+.authWrapper {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* ============================================================================
+   LEFT SIDE - BRANDING (Desktop Only)
+   ============================================================================ */
+
+.brandSection {
+  display: none;
+  flex: 1;
+  background: linear-gradient(135deg, #0A65CC 0%, #003D7A 100%);
+  color: #FFFFFF;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.brandLogo {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.brandTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.brandSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+/* ============================================================================
+   RIGHT SIDE - FORM SECTION (Main)
+   ============================================================================ */
+
+.formSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: #FFFFFF;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 420px;
+}
+
+.formHeader {
+  margin-bottom: 32px;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  object-fit: cover;
+  background: #F3F4F6;
+}
+
+.formTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.formSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6B7280;
+  margin: 0;
+}
+
+/* ============================================================================
+   CENTERED LAYOUT (Forgot/Reset Password)
+   ============================================================================ */
+.centeredLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #F9FAFB;
+  padding: 20px;
+}
+
+.centeredCard {
+  width: 100%;
+  max-width: 450px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 40px;
+  text-align: center;
+}
+
+.centeredHeader {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.centeredTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.centeredSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6B7280;
+  line-height: 1.5;
+}
+
+/* ============================================================================
+   FORM ELEMENTS
+   ============================================================================ */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.label {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.input {
+  padding: 12px 16px;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #111827;
+  background: #FFFFFF;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input::placeholder {
+  color: #9CA3AF;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #0A65CC;
+  box-shadow: 0 0 0 3px rgba(10, 101, 204, 0.1);
+}
+
+.select {
+  padding: 12px 16px;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #111827;
+  background: #FFFFFF;
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.select:focus {
+  outline: none;
+  border-color: #0A65CC;
+}
+
+/* ============================================================================
+   MESSAGES (Error & Success)
+   ============================================================================ */
+
+.message {
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.errorMessage {
+  background: #FEE2E2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+}
+
+.successMessage {
+  background: #DCFCE7;
+  color: #16A34A;
+  border: 1px solid #BBF7D0;
+}
+
+/* ============================================================================
+   BUTTONS
+   ============================================================================ */
+
+.submitBtn {
+  padding: 12px 24px;
+  background: #0A65CC;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: #003D7A;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.submitBtn:disabled {
+  background: #D1D5DB;
+  color: #9CA3AF;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ============================================================================
+   FOOTER - LOGIN/REGISTER TOGGLE
+   ============================================================================ */
+
+.formFooter {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #D1D5DB;
+  text-align: center;
+}
+
+.footerText {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6B7280;
+  margin: 0;
+}
+
+.toggleLink {
+  background: none;
+  border: none;
+  color: #0A65CC;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 4px;
+  text-decoration: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggleLink:hover {
+  opacity: 0.8;
+}
+
+/* ============================================================================
+   ROLE TOGGLE (Register Page)
+   ============================================================================ */
+
+.roleToggle {
+  display: flex;
+  gap: 6px;
+  background: #F3F4F6;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 6px;
+  padding: 4px;
+  width: 100%;
+}
+
+.roleOption {
+  flex: 1;
+  padding: 10px 16px;
+  border: 1.5px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6B7280;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.roleOption:hover {
+  background: #FFFFFF;
+  border-color: #D1D5DB;
+}
+
+.roleOptionActive {
+  background: #0A65CC;
+  color: #FFFFFF;
+  border-color: #0A65CC;
+}
+
+/* ============================================================================
+   DIVIDER & SOCIAL BUTTONS
+   ============================================================================ */
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #D1D5DB;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #E5E7EB;
+}
+
+.socialButtons {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.socialBtn {
+  flex: 1;
+  padding: 10px 16px;
+  background: #FFFFFF;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socialBtn:hover {
+  border-color: #0A65CC;
+  background: #F9FAFB;
+}
+
+.socialBtn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================================================================
+   HELPER CLASSES
+   ============================================================================ */
+
+.brandContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.brandText {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.toggleText {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6B7280;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.formOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .brandSection {
+    display: flex;
+  }
+}

@@ -1,0 +1,973 @@
+/* ============================================================================
+   STUDENT APPLICATIONS & PROFILE - CLEAN & PROFESSIONAL DESIGN
+   ============================================================================
+   Pages for viewing and managing student applications and profile
+   ============================================================================ */
+
+.page {
+  background: #F9FAFB;
+  min-height: 100vh;
+  padding: 32px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================================================================
+   PAGE HEADER
+   ============================================================================ */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.headerLeft {
+  flex: 1;
+}
+
+.pageTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.pageSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6B7280;
+  margin: 0;
+}
+
+.headerActions {
+  display: flex;
+  gap: 12px;
+}
+
+/* ============================================================================
+   FILTERS & SEARCH BAR
+   ============================================================================ */
+
+.filterBar {
+  background: #FFFFFF;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 32px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 16px;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #111827;
+  background: #FFFFFF;
+}
+
+.searchInput::placeholder {
+  color: #9CA3AF;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #0A65CC;
+  box-shadow: 0 0 0 3px rgba(10, 101, 204, 0.1);
+}
+
+.select {
+  padding: 10px 14px;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #111827;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #0A65CC;
+}
+
+/* ============================================================================
+   APPLICATION CARDS / LIST
+   ============================================================================ */
+
+.applicationCard {
+  background: #FFFFFF;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.applicationCard:hover {
+  border-color: #0A65CC;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.applicationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+
+.applicationTitle {
+  flex: 1;
+}
+
+.jobTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.companyName {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6B7280;
+  margin: 0;
+}
+
+.applicationStatus {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.statusPending {
+  background: #FEF3C7;
+  color: #B45309;
+}
+
+.statusApproved {
+  background: #DCFCE7;
+  color: #16A34A;
+}
+
+.statusRejected {
+  background: #FEE2E2;
+  color: #DC2626;
+}
+
+.statusInterviewing {
+  background: #DBEAFE;
+  color: #0369A1;
+}
+
+.statusOffer {
+  background: #E0E7FF;
+  color: #4F46E5;
+}
+
+.appliedDate {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #9CA3AF;
+}
+
+.applicationMeta {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.metaLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+
+.metaValue {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.applicationActions {
+  display: flex;
+  gap: 12px;
+}
+
+/* ============================================================================
+   PROFILE FORM
+   ============================================================================ */
+
+.formSection {
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 32px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.formTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 24px 0;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.input,
+.textarea,
+.select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #111827;
+  background: #FFFFFF;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #9CA3AF;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  outline: none;
+  border-color: #0A65CC;
+  box-shadow: 0 0 0 3px rgba(10, 101, 204, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: 'Inter', sans-serif;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.formGroup.fullWidth {
+  grid-column: 1 / -1;
+}
+
+/* ============================================================================
+   BUTTONS
+   ============================================================================ */
+
+.button {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.buttonPrimary {
+  background: #0A65CC;
+  color: #FFFFFF;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.buttonPrimary:hover {
+  background: #003D7A;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.buttonSecondary {
+  background: #F3F4F6;
+  color: #111827;
+  border: 1.5px solid #D1D5DB;
+}
+
+.buttonSecondary:hover {
+  background: #E5E7EB;
+  border-color: #0A65CC;
+}
+
+.buttonSmall {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+.buttonBlock {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ============================================================================
+   EMPTY STATE
+   ============================================================================ */
+
+.emptyState {
+  text-align: center;
+  padding: 60px 32px;
+  background: #FFFFFF;
+  border: 1.5px dashed #D1D5DB;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.emptyTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.emptySubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #6B7280;
+  margin: 0 0 24px 0;
+}
+
+/* ============================================================================
+   TABLET RESPONSIVE (768px - 1023px)
+   ============================================================================ */
+
+@media (max-width: 1023px) {
+  .page {
+    padding: 24px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .pageTitle {
+    font-size: 28px;
+  }
+
+  .filterBar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .searchInput,
+  .select {
+    width: 100%;
+  }
+
+  .applicationCard {
+    padding: 20px;
+  }
+
+  .applicationHeader {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .applicationStatus {
+    align-items: flex-start;
+  }
+
+  .formSection {
+    padding: 24px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================================
+   MOBILE RESPONSIVE (480px - 767px)
+   ============================================================================ */
+
+@media (max-width: 767px) {
+  .page {
+    padding: 20px;
+  }
+
+  .pageTitle {
+    font-size: 24px;
+  }
+
+  .pageSubtitle {
+    font-size: 13px;
+  }
+
+  .filterBar {
+    flex-direction: column;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .searchInput,
+  .select {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .applicationCard {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .jobTitle {
+    font-size: 16px;
+  }
+
+  .companyName {
+    font-size: 13px;
+  }
+
+  .statusBadge {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+
+  .applicationMeta {
+    gap: 16px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+  }
+
+  .metaLabel {
+    font-size: 11px;
+  }
+
+  .metaValue {
+    font-size: 13px;
+  }
+
+  .applicationActions {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .formSection {
+    padding: 20px;
+  }
+
+  .formTitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .formGroup {
+    margin-bottom: 16px;
+  }
+
+  .label {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .input,
+  .textarea,
+  .select {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .textarea {
+    min-height: 100px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .buttonSmall {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .emptyState {
+    padding: 40px 20px;
+  }
+}
+
+/* ============================================================================
+   EXTRA MOBILE (<480px)
+   ============================================================================ */
+
+@media (max-width: 479px) {
+  .page {
+    padding: 16px;
+  }
+
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .pageTitle {
+    font-size: 20px;
+  }
+
+  .pageSubtitle {
+    font-size: 12px;
+  }
+
+  .filterBar {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .searchInput,
+  .select {
+    width: 100%;
+    padding: 9px 12px;
+    font-size: 14px;
+  }
+
+  .applicationCard {
+    padding: 14px;
+    margin-bottom: 12px;
+  }
+
+  .jobTitle {
+    font-size: 14px;
+  }
+
+  .companyName {
+    font-size: 12px;
+  }
+
+  .applicationHeader {
+    gap: 8px;
+  }
+
+  .statusBadge {
+    padding: 3px 8px;
+    font-size: 10px;
+  }
+
+  .appliedDate {
+    font-size: 11px;
+  }
+
+  .applicationMeta {
+    gap: 12px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .metaLabel {
+    font-size: 10px;
+  }
+
+  .metaValue {
+    font-size: 12px;
+  }
+
+  .applicationActions {
+    gap: 6px;
+  }
+
+  .formSection {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .formTitle {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .formGroup {
+    margin-bottom: 14px;
+  }
+
+  .label {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .input,
+  .textarea,
+  .select {
+    padding: 8px 11px;
+    font-size: 14px;
+  }
+
+  .textarea {
+    min-height: 90px;
+  }
+
+  .button {
+    padding: 9px 16px;
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .buttonBlock {
+    width: 100%;
+  }
+
+  .buttonSmall {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .emptyState {
+    padding: 32px 16px;
+  }
+
+  .emptyIcon {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  .emptyTitle {
+    font-size: 14px;
+  }
+
+  .emptySubtitle {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+}
+
+/* ============================================================================
+   PROFILE PAGE STYLES
+   ============================================================================ */
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  background: #F9FAFB;
+  margin-bottom: 32px;
+}
+
+.profileImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0A65CC 0%, #003D7A 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: #FFFFFF;
+  flex-shrink: 0;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 4px 12px rgba(10, 101, 204, 0.15);
+}
+
+.profileInfo {
+  flex: 1;
+}
+
+.profileName {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.profileEmail {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.fieldText {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #111827;
+  margin: 0;
+  padding-bottom: 8px;
+}
+
+.fileUpload {
+  position: relative; /* Add this */
+  border: 2px dashed #D1D5DB;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  background: #F9FAFB;
+}
+
+.fileUpload input[type="file"] {
+  display: block !important; /* Overwrite the none */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Invisible but there */
+  cursor: pointer;
+  z-index: 10;
+}
+
+.fileUpload:hover {
+  border-color: #0A65CC;
+  background: #F0F4FF;
+}
+
+.fileUpload input {
+  display: none;
+}
+
+.fileUploadText {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.resumeLink {
+  display: inline-block;
+  padding: 12px 16px;
+  background: #DBEAFE;
+  border: 1.5px solid #93C5FD;
+  border-radius: 6px;
+  color: #0369A1;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.resumeLink:hover {
+  background: #93C5FD;
+  color: #FFFFFF;
+}
+
+/* ============================================================================
+   APPLICATION STATUS BADGES
+   ============================================================================ */
+
+.statusPending {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #FEF3C7;
+  color: #B45309;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.statusApproved {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #DCFCE7;
+  color: #16A34A;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.statusRejected {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #FEE2E2;
+  color: #DC2626;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.statusShortlisted {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #DBEAFE;
+  color: #0369A1;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.statusOffer {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #E0E7FF;
+  color: #4F46E5;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ============================================================================
+   TABLET RESPONSIVE - PROFILE (768px - 1023px)
+   ============================================================================ */
+
+@media (max-width: 1023px) {
+  .profileHeader {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .profileImage {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+  }
+}
+
+/* ============================================================================
+   MOBILE RESPONSIVE - PROFILE (480px - 767px)
+   ============================================================================ */
+
+@media (max-width: 767px) {
+  .profileHeader {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .profileImage {
+    width: 90px;
+    height: 90px;
+    font-size: 36px;
+  }
+
+  .profileName {
+    font-size: 20px;
+  }
+
+  .profileEmail {
+    font-size: 13px;
+  }
+
+  .fileUpload {
+    padding: 20px;
+  }
+}
+
+/* ============================================================================
+   EXTRA MOBILE RESPONSIVE - PROFILE (<480px)
+   ============================================================================ */
+
+@media (max-width: 479px) {
+  .profileHeader {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .profileImage {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+
+  .profileName {
+    font-size: 18px;
+  }
+
+  .profileEmail {
+    font-size: 12px;
+  }
+
+  .fieldText {
+    font-size: 14px;
+  }
+
+  .fileUpload {
+    padding: 16px;
+  }
+
+  .fileUploadText {
+    font-size: 13px;
+  }
+
+  .resumeLink {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+}

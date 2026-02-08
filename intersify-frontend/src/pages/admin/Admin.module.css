@@ -1,0 +1,745 @@
+/* ============================================================================
+   ADMIN PAGES - CLEAN & PROFESSIONAL DESIGN
+   ============================================================================
+   Admin management pages: companies, internships
+   ============================================================================ */
+
+.page {
+  background: #F9FAFB;
+  min-height: 100vh;
+  padding: 32px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================================================================
+   PAGE HEADER
+   ============================================================================ */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 20px;
+}
+
+.headerLeft {
+  flex: 1;
+}
+
+.pageTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.pageSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6B7280;
+  margin: 0;
+}
+
+.headerActions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ============================================================================
+   FILTERS & SEARCH
+   ============================================================================ */
+
+.filterBar {
+  background: #FFFFFF;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 32px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 16px;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #111827;
+  background: #FFFFFF;
+}
+
+.searchInput::placeholder {
+  color: #9CA3AF;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #0A65CC;
+  box-shadow: 0 0 0 3px rgba(10, 101, 204, 0.1);
+}
+
+.select {
+  padding: 10px 14px;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #111827;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #0A65CC;
+}
+
+/* ============================================================================
+   CARDS (Company/Internship Listing)
+   ============================================================================ */
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.card {
+  background: #FFFFFF;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 24px;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card:hover {
+  border-color: #0A65CC;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.cardIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background: #F3F4F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.cardInfo {
+  flex: 1;
+}
+
+.cardTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.cardSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #6B7280;
+  margin: 4px 0 0 0;
+}
+
+.cardStatus {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.statusPending {
+  background: #FEF3C7;
+  color: #B45309;
+}
+
+.statusApproved {
+  background: #DCFCE7;
+  color: #16A34A;
+}
+
+.statusRejected {
+  background: #FEE2E2;
+  color: #DC2626;
+}
+
+.statusActive {
+  background: #DBEAFE;
+  color: #0369A1;
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #E5E7EB;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+}
+
+.metaItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.metaLabel {
+  color: #6B7280;
+}
+
+.metaValue {
+  font-weight: 600;
+  color: #111827;
+}
+
+.cardActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+/* ============================================================================
+   TABLE
+   ============================================================================ */
+
+.section {
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 32px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 24px 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: 14px 16px;
+  text-align: left;
+  background: #F9FAFB;
+  border-bottom: 1.5px solid #D1D5DB;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #4B5563;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.table td {
+  padding: 16px;
+  border-bottom: 1px solid #E5E7EB;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #111827;
+}
+
+.table tr:hover {
+  background: #F9FAFB;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ============================================================================
+   BUTTONS
+   ============================================================================ */
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.buttonPrimary {
+  background: #0A65CC;
+  color: #FFFFFF;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.buttonPrimary:hover {
+  background: #003D7A;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.buttonSecondary {
+  background: #F3F4F6;
+  color: #111827;
+  border: 1.5px solid #D1D5DB;
+}
+
+.buttonSecondary:hover {
+  background: #E5E7EB;
+  border-color: #0A65CC;
+}
+
+.buttonSuccess {
+  background: #DCFCE7;
+  color: #16A34A;
+  border: 1px solid #BBF7D0;
+}
+
+.buttonSuccess:hover {
+  background: #C6F6D5;
+}
+
+.buttonDanger {
+  background: #FEE2E2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+}
+
+.buttonDanger:hover {
+  background: #FEF2F2;
+}
+
+.buttonSmall {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.buttonBlock {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ============================================================================
+   MODAL / DETAIL SECTION
+   ============================================================================ */
+
+.modal {
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.modalHeader {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #D1D5DB;
+}
+
+.modalTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #111827;
+  background: #FFFFFF;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #9CA3AF;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #0A65CC;
+  box-shadow: 0 0 0 3px rgba(10, 101, 204, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ============================================================================
+   EMPTY STATE
+   ============================================================================ */
+
+.emptyState {
+  text-align: center;
+  padding: 60px 32px;
+  background: #FFFFFF;
+  border: 1.5px dashed #D1D5DB;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.emptyTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.emptySubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #6B7280;
+  margin: 0 0 24px 0;
+}
+
+/* ============================================================================
+   TABLET RESPONSIVE (768px - 1023px)
+   ============================================================================ */
+
+@media (max-width: 1023px) {
+  .page {
+    padding: 24px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pageTitle {
+    font-size: 28px;
+  }
+
+  .filterBar {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .searchInput,
+  .select {
+    width: 100%;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .section {
+    padding: 24px;
+  }
+
+  .table th {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  .table td {
+    padding: 12px;
+  }
+}
+
+/* ============================================================================
+   MOBILE RESPONSIVE (480px - 767px)
+   ============================================================================ */
+
+@media (max-width: 767px) {
+  .page {
+    padding: 20px;
+  }
+
+  .pageTitle {
+    font-size: 24px;
+  }
+
+  .pageSubtitle {
+    font-size: 13px;
+  }
+
+  .filterBar {
+    flex-direction: column;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .searchInput,
+  .select {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .cardHeader {
+    gap: 12px;
+  }
+
+  .cardIcon {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+
+  .cardTitle {
+    font-size: 16px;
+  }
+
+  .cardSubtitle {
+    font-size: 12px;
+  }
+
+  .statusBadge {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+  .sectionTitle {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .table th {
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+
+  .table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .buttonSmall {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  .modal {
+    padding: 20px;
+  }
+
+  .input,
+  .textarea {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+
+/* ============================================================================
+   EXTRA MOBILE (<480px)
+   ============================================================================ */
+
+@media (max-width: 479px) {
+  .page {
+    padding: 16px;
+  }
+
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .pageTitle {
+    font-size: 20px;
+  }
+
+  .pageSubtitle {
+    font-size: 12px;
+  }
+
+  .filterBar {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .searchInput,
+  .select {
+    width: 100%;
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .cardIcon {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  .cardTitle {
+    font-size: 14px;
+  }
+
+  .cardSubtitle {
+    font-size: 11px;
+  }
+
+  .cardMeta {
+    gap: 6px;
+    padding-top: 10px;
+    font-size: 12px;
+  }
+
+  .section {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .sectionTitle {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .table th {
+    padding: 6px 8px;
+    font-size: 9px;
+  }
+
+  .table td {
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  .button {
+    padding: 8px 12px;
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .modal {
+    padding: 16px;
+  }
+
+  .modalTitle {
+    font-size: 20px;
+  }
+
+  .input,
+  .textarea {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .textarea {
+    min-height: 90px;
+  }
+
+  .emptyState {
+    padding: 32px 16px;
+  }
+
+  .emptyIcon {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  .emptyTitle {
+    font-size: 14px;
+  }
+
+  .emptySubtitle {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+}

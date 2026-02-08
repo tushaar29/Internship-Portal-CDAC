@@ -1,0 +1,707 @@
+/* ============================================================================
+   INTERNSHIPS PAGE - TWO COLUMN LAYOUT WITH FILTER + CARDS
+   ============================================================================
+   Left: Collapsible filter panel (Job Type, Duration, Stipend)
+   Right: Scrollable internship cards grid
+   Top: Search bar + Sort dropdown
+   ============================================================================ */
+
+.page {
+  background: #F9FAFB;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================================================
+   TOP BAR - SEARCH & SORT
+   ============================================================================ */
+
+.topBar {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 20px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.topBarContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Search Container */
+.searchContainer {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  gap: 8px;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  transition: all 250ms ease;
+  background: #FFFFFF;
+  color: #111827;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #0A65CC;
+  box-shadow: 0 0 0 3px rgba(10, 101, 204, 0.1);
+  background: #FFFFFF;
+}
+
+.searchInput::placeholder {
+  color: #9CA3AF;
+}
+
+.searchBtn {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #0A65CC 0%, #003D7A 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 250ms ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(10, 101, 204, 0.2);
+}
+
+.searchBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(10, 101, 204, 0.3);
+}
+
+/* Sort Container */
+.sortContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.sortLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6B7280;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.sortSelect {
+  padding: 10px 14px;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 8px;
+  background: #FFFFFF;
+  color: #111827;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 250ms ease;
+  min-width: 160px;
+}
+
+.sortSelect:hover {
+  border-color: #0A65CC;
+}
+
+.sortSelect:focus {
+  outline: none;
+  border-color: #0A65CC;
+  box-shadow: 0 0 0 3px rgba(10, 101, 204, 0.1);
+}
+
+/* Toggle Filters Button */
+.toggleFilters {
+  padding: 10px 16px;
+  background: #F3F4F6;
+  color: #111827;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 250ms ease;
+  white-space: nowrap;
+  display: none;
+}
+
+.toggleFilters:hover {
+  background: #E5E7EB;
+  border-color: #0A65CC;
+}
+
+/* Show toggle button on desktop to match filtering behavior */
+@media (min-width: 769px) {
+  .toggleFilters {
+    display: none !important;
+  }
+}
+
+/* ============================================================================
+   MAIN CONTENT - TWO COLUMN LAYOUT
+   ============================================================================ */
+
+.mainContent {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+  padding: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ============================================================================
+   LEFT COLUMN - FILTER PANEL
+   ============================================================================ */
+
+.filterPanel {
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 24px;
+  height: fit-content;
+  position: sticky;
+  top: 90px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #E5E7EB;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.filterHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filterTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.clearFiltersBtn {
+  padding: 6px 10px;
+  background: transparent;
+  color: #0A65CC;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 200ms ease;
+  white-space: nowrap;
+}
+
+.clearFiltersBtn:hover {
+  background: #E7F0FA;
+  border-color: #0A65CC;
+}
+
+.closeFilterBtn {
+  display: none;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  color: #6B7280;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 200ms ease;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.closeFilterBtn:hover {
+  background: #F3F4F6;
+  border-color: #0A65CC;
+  color: #0A65CC;
+}
+
+/* Filter Group */
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.filterGroup:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.filterGroupTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filterOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filterOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: all 200ms ease;
+}
+
+.filterOption:hover {
+  transform: translateX(2px);
+}
+
+.filterOption input[type='radio'] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #0A65CC;
+}
+
+.filterLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6B7280;
+  cursor: pointer;
+  transition: color 200ms ease;
+}
+
+.filterOption input[type='radio']:checked + .filterLabel {
+  color: #0A65CC;
+  font-weight: 600;
+}
+
+/* ============================================================================
+   RIGHT COLUMN - CARDS CONTAINER
+   ============================================================================ */
+
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  animation: fadeIn 300ms ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================================================
+   NO RESULTS STATE
+   ============================================================================ */
+
+.noResults {
+  grid-column: 1 / -1;
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 80px 40px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.noResultsTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.noResultsText {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.resetBtn {
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #0A65CC 0%, #003D7A 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 250ms ease;
+  box-shadow: 0 4px 12px rgba(10, 101, 204, 0.2);
+}
+
+.resetBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(10, 101, 204, 0.3);
+}
+
+/* ============================================================================
+   RESPONSIVE DESIGN
+   ============================================================================ */
+
+@media (max-width: 1200px) {
+  .mainContent {
+    gap: 24px;
+    grid-template-columns: 240px 1fr;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .topBarContainer {
+    gap: 12px;
+  }
+
+  .searchContainer {
+    min-width: 280px;
+  }
+
+  .sortSelect {
+    min-width: 140px;
+  }
+
+  .mainContent {
+    gap: 20px;
+    grid-template-columns: 220px 1fr;
+  }
+
+  .filterPanel {
+    padding: 20px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topBar {
+    padding: 16px;
+  }
+
+  .topBarContainer {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .searchContainer {
+    width: 100%;
+    flex: none;
+  }
+
+  .sortContainer {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .sortSelect {
+    flex: 1;
+  }
+
+  .toggleFilters {
+    display: block;
+    width: 100%;
+  }
+
+  .mainContent {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 20px;
+  }
+
+  .filterPanel {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2000;
+    border-radius: 0;
+    max-width: 280px;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    background: #FFFFFF;
+  }
+
+  .filterPanel.visible {
+    display: flex;
+  }
+
+  .filterHeaderActions {
+    flex-direction: row-reverse;
+  }
+
+  .closeFilterBtn {
+    display: flex;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+
+  .noResults {
+    padding: 60px 20px;
+  }
+
+  .noResultsTitle {
+    font-size: 20px;
+  }
+
+  .noResultsText {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topBar {
+    padding: 12px;
+  }
+
+  .topBarContainer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .searchInput {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .searchBtn {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  .sortLabel {
+    display: none;
+  }
+
+  .sortContainer {
+    width: 100%;
+  }
+
+  .sortSelect {
+    width: 100%;
+  }
+
+  .toggleFilters {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .mainContent {
+    padding: 16px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .filterPanel {
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .filterHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .clearFiltersBtn {
+    align-self: flex-start;
+  }
+
+  .noResults {
+    padding: 40px 16px;
+  }
+
+  .noResultsTitle {
+    font-size: 18px;
+  }
+
+  .resetBtn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+/* ============================================================================
+   PAGINATION STYLES
+   ============================================================================ */
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+  align-items: center;
+}
+
+.paginationInfo {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6B7280;
+  text-align: center;
+}
+
+.paginationControls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.paginationBtn {
+  padding: 8px 12px;
+  border: 1.5px solid #E5E7EB;
+  background: #FFFFFF;
+  color: #6B7280;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 200ms ease;
+  min-width: 32px;
+  text-align: center;
+}
+
+.paginationBtn:hover:not(:disabled) {
+  border-color: #0A65CC;
+  color: #0A65CC;
+  background: #F0F9FF;
+}
+
+.paginationBtnActive {
+  background: #0A65CC;
+  color: #FFFFFF;
+  border-color: #0A65CC;
+}
+
+.paginationBtnActive:hover {
+  background: #003D7A;
+  border-color: #003D7A;
+}
+
+.paginationBtnDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.paginationEllipsis {
+  color: #9CA3AF;
+  font-size: 14px;
+  padding: 0 4px;
+}
+
+/* Pagination responsive */
+@media (max-width: 768px) {
+  .pagination {
+    gap: 12px;
+    margin-top: 24px;
+  }
+  
+  .paginationControls {
+    gap: 6px;
+  }
+  
+  .paginationBtn {
+    padding: 6px 10px;
+    font-size: 12px;
+    min-width: 28px;
+  }
+  
+  .paginationInfo {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .paginationControls {
+    gap: 4px;
+  }
+  
+  .paginationBtn {
+    padding: 6px 8px;
+    font-size: 11px;
+    min-width: 24px;
+  }
+}

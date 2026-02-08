@@ -1,0 +1,965 @@
+/* ============================================================================
+   HOME PAGE - EXACT FIGMA DESIGN (101% PRECISION)
+   ============================================================================
+   All values extracted from Jobpilot Figma template with pixel-perfect accuracy
+   ============================================================================ */
+
+/* ============================================================================
+   HERO SECTION
+   ============================================================================ */
+
+.heroSection {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 100%);
+  padding: 80px 32px;
+  margin-bottom: 80px;
+}
+
+.heroTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111827;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.heroSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6B7280;
+  margin-bottom: 48px;
+  max-width: 600px;
+}
+
+/* Search Container */
+.searchContainer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: #FFFFFF;
+  padding: 12px;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 100%;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  padding: 8px 12px;
+  color: #111827;
+  background: transparent;
+}
+
+.searchInput::placeholder {
+  color: #9CA3AF;
+}
+
+.searchInput:focus {
+  outline: 2px solid #0A65CC;
+  outline-offset: -2px;
+}
+
+.searchButton {
+  background: #0A65CC;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.searchButton:hover {
+  background: #003D7A;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.searchButton:active {
+  transform: translateY(0);
+}
+
+/* ============================================================================
+   FEATURED SECTION
+   ============================================================================ */
+
+.featuredSection {
+  padding: 80px 32px;
+  background: #FFFFFF;
+  margin-bottom: 80px;
+}
+
+.sectionTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111827;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.sectionSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6B7280;
+  margin-bottom: 32px;
+}
+
+.jobsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.viewAllBtn {
+  background: #0A65CC;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 32px;
+  display: inline-block;
+}
+
+.viewAllBtn:hover {
+  background: #003D7A;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ============================================================================
+   CATEGORIES SECTION
+   ============================================================================ */
+
+.categoriesSection {
+  padding: 80px 32px;
+  background: #F9FAFB;
+  margin-bottom: 80px;
+}
+
+.categoryCard {
+  background: #FFFFFF;
+  padding: 32px 24px;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.categoryCard:hover {
+  border-color: #0A65CC;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.categoryIcon {
+  font-size: 40px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.categoryName {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.categoryCount {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #9CA3AF;
+  margin: 0;
+}
+
+/* ============================================================================
+   WHY US SECTION
+   ============================================================================ */
+
+.whyUsSection {
+  padding: 80px 32px;
+  background: #FFFFFF;
+  margin-bottom: 80px;
+}
+
+.whyUsCard {
+  background: #F9FAFB;
+  padding: 32px 24px;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.whyUsCard:hover {
+  background: #FFFFFF;
+  border-color: #0A65CC;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.whyUsIcon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.whyUsTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.whyUsDescription {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6B7280;
+  margin: 0;
+}
+
+/* ============================================================================
+   LOADING & EMPTY STATES
+   ============================================================================ */
+
+.loadingMessage,
+.emptyMessage {
+  text-align: center;
+  padding: 48px 32px;
+  color: #9CA3AF;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* ============================================================================
+   TABLET RESPONSIVE (768px - 1023px)
+   ============================================================================ */
+
+@media (max-width: 1023px) {
+  .heroSection {
+    padding: 48px 24px;
+    margin-bottom: 60px;
+  }
+
+  .heroTitle {
+    font-size: 36px;
+  }
+
+  .heroSubtitle {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .searchContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchButton {
+    width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .sectionSubtitle {
+    font-size: 15px;
+  }
+
+  .featuredSection,
+  .categoriesSection,
+  .whyUsSection {
+    padding: 60px 24px;
+    margin-bottom: 60px;
+  }
+
+  .categoryCard {
+    padding: 24px 16px;
+  }
+
+  .whyUsCard {
+    padding: 24px 16px;
+  }
+}
+
+/* ============================================================================
+   MOBILE RESPONSIVE (480px - 767px)
+   ============================================================================ */
+
+@media (max-width: 767px) {
+  .heroSection {
+    padding: 32px 16px;
+    margin-bottom: 48px;
+  }
+
+  .heroTitle {
+    font-size: 28px;
+  }
+
+  .heroSubtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .searchContainer {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .searchInput {
+    padding: 12px;
+  }
+
+  .searchButton {
+    width: 100%;
+    padding: 12px 16px;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+  }
+
+  .sectionSubtitle {
+    font-size: 14px;
+  }
+
+  .featuredSection,
+  .categoriesSection,
+  .whyUsSection {
+    padding: 40px 16px;
+    margin-bottom: 48px;
+  }
+
+  .jobsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .categoryCard {
+    padding: 20px 12px;
+  }
+
+  .categoryIcon {
+    font-size: 32px;
+  }
+
+  .categoryName {
+    font-size: 14px;
+  }
+
+  .categoryCount {
+    font-size: 12px;
+  }
+
+  .whyUsCard {
+    padding: 20px 12px;
+  }
+
+  .whyUsIcon {
+    font-size: 28px;
+  }
+
+  .whyUsTitle {
+    font-size: 16px;
+  }
+
+  .whyUsDescription {
+    font-size: 13px;
+  }
+
+  .viewAllBtn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+/* ============================================================================
+   EXTRA MOBILE (<480px)
+   ============================================================================ */
+
+@media (max-width: 479px) {
+  .heroSection {
+    padding: 24px 12px;
+    margin-bottom: 32px;
+  }
+
+  .heroTitle {
+    font-size: 22px;
+  }
+
+  .heroSubtitle {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .searchContainer {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .searchInput {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .searchButton {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .sectionSubtitle {
+    font-size: 13px;
+  }
+
+  .featuredSection,
+  .categoriesSection,
+  .whyUsSection {
+    padding: 32px 12px;
+    margin-bottom: 40px;
+  }
+
+  .jobsGrid {
+    gap: 12px;
+  }
+
+  .categoryCard {
+    padding: 16px 8px;
+  }
+
+  .whyUsCard {
+    padding: 16px 8px;
+  }
+
+  .loadingMessage,
+  .emptyMessage {
+    padding: 32px 12px;
+  }
+}
+
+.heroTitle {
+  font-family: "Inter", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111827;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.heroSubtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6b7280;
+  margin-bottom: 48px;
+  max-width: 600px;
+}
+
+/* Search Container - Figma Exact */
+.searchContainer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: #ffffff;
+  padding: 12px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 100%;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  padding: 8px 12px;
+  color: #111827;
+  background: transparent;
+}
+
+.searchInput::placeholder {
+  color: #9ca3af;
+}
+
+.searchInput:focus {
+  outline: 2px solid #0a65cc;
+  outline-offset: -2px;
+}
+
+.searchButton {
+  background: #0a65cc;
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.searchButton:hover {
+  background: #003d7a;
+  box-shadow: 0 10px 25px -5px rgba(10, 101, 204, 0.3);
+  transform: translateY(-2px);
+}
+
+.searchButton:active {
+  transform: translateY(0);
+}
+
+/* ============================================================================
+   SECTION HEADERS - Consistent Styling
+   ============================================================================ */
+
+.sectionTitle {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111827;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.sectionSubtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6b7280;
+  margin-bottom: 0;
+}
+
+/* ============================================================================
+   FEATURED JOBS SECTION - Bootstrap Grid Integration
+   ============================================================================ */
+
+.featuredSection {
+  padding: 80px 32px;
+  background: #ffffff;
+  margin-bottom: 80px;
+}
+
+.jobsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.viewAllBtn {
+  background: #0a65cc;
+  color: #ffffff;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.viewAllBtn:hover {
+  background: #003d7a;
+  box-shadow: 0 10px 25px -5px rgba(10, 101, 204, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ============================================================================
+   CATEGORIES SECTION - 4-Column Grid
+   ============================================================================ */
+
+.categoriesSection {
+  padding: 80px 32px;
+  background: #f3f4f6;
+  margin-bottom: 80px;
+}
+
+.categoryCard {
+  background: #ffffff;
+  padding: 32px 24px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.categoryCard:hover {
+  border-color: #0a65cc;
+  box-shadow: 0 10px 25px -5px rgba(10, 101, 204, 0.15);
+  transform: translateY(-4px);
+}
+
+.categoryIcon {
+  font-size: 40px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.categoryName {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.categoryCount {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* ============================================================================
+   WHY US SECTION - 3-Column Cards
+   ============================================================================ */
+
+.whyUsSection {
+  padding: 80px 32px;
+  background: #ffffff;
+  margin-bottom: 80px;
+}
+
+.whyUsCard {
+  background: #f9fafb;
+  padding: 32px 24px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.whyUsCard:hover {
+  background: #ffffff;
+  border-color: #0a65cc;
+  box-shadow: 0 10px 25px -5px rgba(10, 101, 204, 0.15);
+  transform: translateY(-4px);
+}
+
+.whyUsIcon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.whyUsTitle {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.whyUsDescription {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* ============================================================================
+   LOADING AND EMPTY STATES
+   ============================================================================ */
+
+.loadingMessage,
+.emptyMessage {
+  text-align: center;
+  padding: 48px 32px;
+  color: #9ca3af;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* ============================================================================
+   TABLET RESPONSIVE (768px - 1023px)
+   ============================================================================ */
+
+@media (max-width: 1023px) {
+  .heroSection {
+    padding: 48px 24px;
+    margin-bottom: 60px;
+  }
+
+  .heroTitle {
+    font-size: 36px;
+  }
+
+  .heroSubtitle {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .searchContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchButton {
+    width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .sectionSubtitle {
+    font-size: 15px;
+  }
+
+  .featuredSection {
+    padding: 60px 24px;
+    margin-bottom: 60px;
+  }
+
+  .categoriesSection {
+    padding: 60px 24px;
+    margin-bottom: 60px;
+  }
+
+  .whyUsSection {
+    padding: 60px 24px;
+    margin-bottom: 60px;
+  }
+
+  .categoryCard {
+    padding: 24px 16px;
+  }
+
+  .whyUsCard {
+    padding: 24px 16px;
+  }
+}
+
+/* ============================================================================
+   MOBILE RESPONSIVE (480px - 767px)
+   ============================================================================ */
+
+@media (max-width: 767px) {
+  .heroSection {
+    padding: 32px 16px;
+    margin-bottom: 48px;
+  }
+
+  .heroTitle {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .heroSubtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .searchContainer {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .searchInput {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .searchButton {
+    width: 100%;
+    padding: 12px 16px;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+  }
+
+  .sectionSubtitle {
+    font-size: 14px;
+  }
+
+  .featuredSection {
+    padding: 40px 16px;
+    margin-bottom: 48px;
+  }
+
+  .jobsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .categoriesSection {
+    padding: 40px 16px;
+    margin-bottom: 48px;
+  }
+
+  .whyUsSection {
+    padding: 40px 16px;
+    margin-bottom: 48px;
+  }
+
+  .categoryCard {
+    padding: 20px 12px;
+  }
+
+  .categoryIcon {
+    font-size: 32px;
+  }
+
+  .categoryName {
+    font-size: 14px;
+  }
+
+  .categoryCount {
+    font-size: 12px;
+  }
+
+  .whyUsCard {
+    padding: 20px 12px;
+  }
+
+  .whyUsIcon {
+    font-size: 28px;
+  }
+
+  .whyUsTitle {
+    font-size: 16px;
+  }
+
+  .whyUsDescription {
+    font-size: 13px;
+  }
+
+  .viewAllBtn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+/* ============================================================================
+   EXTRA MOBILE RESPONSIVE (<480px)
+   ============================================================================ */
+
+@media (max-width: 479px) {
+  .heroSection {
+    padding: 24px 12px;
+    margin-bottom: 32px;
+  }
+
+  .heroTitle {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .heroSubtitle {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .searchContainer {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .searchInput {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .searchButton {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .sectionSubtitle {
+    font-size: 13px;
+  }
+
+  .featuredSection {
+    padding: 32px 12px;
+    margin-bottom: 40px;
+  }
+
+  .categoriesSection {
+    padding: 32px 12px;
+    margin-bottom: 40px;
+  }
+
+  .whyUsSection {
+    padding: 32px 12px;
+    margin-bottom: 40px;
+  }
+
+  .jobsGrid {
+    gap: 12px;
+  }
+
+  .categoryCard {
+    padding: 16px 8px;
+  }
+
+  .whyUsCard {
+    padding: 16px 8px;
+  }
+
+  .loadingMessage,
+  .emptyMessage {
+    padding: 32px 12px;
+  }
+}
+
